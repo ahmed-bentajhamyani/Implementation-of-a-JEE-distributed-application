@@ -1,1 +1,1 @@
-# Implementation-of-a-JEE-distributed-application
+# Implementation of a JEE distributed application
