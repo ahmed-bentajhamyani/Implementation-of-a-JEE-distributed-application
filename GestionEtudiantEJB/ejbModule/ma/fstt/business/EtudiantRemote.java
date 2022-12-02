@@ -1,7 +1,6 @@
 package ma.fstt.business;
 
 import java.util.List;
-
 import jakarta.ejb.Remote;
 import ma.fstt.persistence.Etudiant;
 
