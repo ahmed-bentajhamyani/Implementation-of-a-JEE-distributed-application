@@ -1,13 +1,15 @@
-package ma.fstt.controller;
+package ma.fstt.business;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.ejb.EJB;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import ma.fstt.business.EtudiantRemote;
+import ma.fstt.persistence.Etudiant;
 
 @WebServlet("")
 public class EtudiantServlet extends HttpServlet {
@@ -16,10 +18,15 @@ public class EtudiantServlet extends HttpServlet {
 	public EtudiantServlet() {
 	}
 
+	@EJB(mappedName="java:global/GestionEtudiantEJB/ManageEtudiantBean!ma.fstt.business.EtudiantRemote")
+    EtudiantRemote ejb ;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		out.println("test ejb ");
+		Etudiant etudiant = ejb.getEtudiant(1l);
+		System.out.println(etudiant.getNom());
+		request.setAttribute("nom", etudiant.getNom());
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
