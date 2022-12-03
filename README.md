@@ -93,4 +93,48 @@ And add the  ```persistence.xml``` file in ```META-INF``` repository of the EJB 
 
 ## Testing the Application
 
-### Products
+### Etudiants List
+
+In the first time the list of etudiants is empty:
+
+<p align="center">
+	<img width="960" alt="1" src="https://user-images.githubusercontent.com/101653735/205465195-cd223d0a-5107-410a-b228-bc7920446b79.png">
+</p>
+
+### Add Etudiant
+
+We added a new etudiant:
+
+<p align="center">
+	<img width="960" alt="2" src="https://user-images.githubusercontent.com/101653735/205465208-6ccdb91a-35a3-4767-bd97-75ac9de9d7fb.png">
+</p>
+
+And after we click on save:
+
+<p align="center">
+	<img width="960" alt="3" src="https://user-images.githubusercontent.com/101653735/205465335-424662a5-7d96-4ef9-b00d-0d6079d2738e.png">
+</p>
+
+We can update or delete an etudiant.
+
+### Update Etudiant
+
+We click on edit link:
+
+<p align="center">
+	<img width="960" alt="4" src="https://user-images.githubusercontent.com/101653735/205465318-14ae3444-5152-4048-96b5-5b90817fc47e.png">
+</p>
+
+And we click on save:
+
+<p align="center">
+	<img width="960" alt="5" src="https://user-images.githubusercontent.com/101653735/205465361-c27cce0c-ec75-4849-85b8-5d91185b83f5.png">
+</p>
+
+### Delete Etudiant
+
+We click on delete link to delete the etudiant we just create:
+
+<p align="center">
+	<img width="960" alt="1" src="https://user-images.githubusercontent.com/101653735/205465375-18ab7b29-935d-4f72-8b9d-9eca38b830c0.png">
+</p>
