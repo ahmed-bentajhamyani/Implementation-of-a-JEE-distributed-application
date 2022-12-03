@@ -10,6 +10,7 @@ This is an implementation of a distributed application using EJB3 technology.
 
 ## Table of contents
 [Installation of JBoss Tools plugin](#installation-of-jBoss-tools-plugin)
+
 [Configuration of WildFly's Datasource](#configuration-of-wildFly's-datasource)
 
 [Testing the Application](#testing-the-application)
