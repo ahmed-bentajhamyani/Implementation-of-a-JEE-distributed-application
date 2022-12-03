@@ -37,11 +37,9 @@ First we downloaded MySQL Connector .jar file and put it in a new repository we 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <module name="com.mysql" xmlns="urn:jboss:module:1.9">
-
     <resources>
         <resource-root path="mysql-connector-java-8.0.30.jar"/>
     </resources>
-
     <dependencies>
         <module name="javax.api"/>
     </dependencies>
@@ -54,11 +52,26 @@ We add the driver tag of mysql in the ```standalone.xml``` file in ```wildfly-27
 <driver name="mysql" module="com.mysql"/>
 ```
 
-We create the data source in the WildFly Administration Console :
+In ```standalone.xml```, just above the driver snippet, we add this datasoure snippet:
 
-<p align="center">
-  <img width="925" alt="7" src="https://user-images.githubusercontent.com/101653735/205167970-d52f7ef0-dd6e-44c0-b007-d860ba2fc406.png">
-</p>
+```
+<datasource jndi-name="java:/EtudiantDS" pool-name="EtudiantDS">
+	<connection-url>jdbc:mysql://localhost:3306/getudiants
+	</connection-url>
+	<driver>mysql</driver>
+	<security>
+		<user-name>root</user-name>
+		<password></password>
+	</security>
+	<validation>
+		<valid-connection-checker
+			class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker" />
+		<background-validation>true</background-validation>
+		<exception-sorter
+			class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter" />
+	</validation>
+</datasource>
+```
 
 And add the  ```persistence.xml``` file in ```META-INF``` repository of the EJB project :
 
