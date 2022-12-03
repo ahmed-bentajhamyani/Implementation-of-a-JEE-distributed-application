@@ -9,18 +9,14 @@ This is an implementation of a distributed application using EJB3 technology.
 **Tools :** Eclipse, Maven, Tomcate, MySQL, JPA, EJB, WildFly.
 
 ## Table of contents
-[Class diagram](#class-diagram)
+[Installation of JBoss Tools plugin](#installation-of-jBoss-tools-plugin)
+[Configuration of WildFly's Datasource](#configuration-of-wildFly's-datasource)
 
 [Testing the Application](#testing-the-application)
-* [Products](#products)
-* [Login](#login)
-* [Signup](#signup)
-* [Shopping Cart](#shopping-cart)
-* [Logout](#logout)
-
-## Installation of JBoss Tools plugin
-
-
+* [Etudiants List](#etudiants-list)
+* [Add Etudiant](#add-etudiant)
+* [Update Etudiant](#update-etudiant)
+* [Delete Etudiant](#delete-etudiant)
 
 ## Installation of JBoss Tools plugin
 
