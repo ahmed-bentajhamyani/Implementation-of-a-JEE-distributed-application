@@ -1,7 +1,6 @@
-package ma.fstt.persistence;
+package ma.fstt.entity;
 
 import java.io.Serializable;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,29 +10,20 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "etudiant")
 public class Etudiant implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_etudiant")
-	private Long idEtudiant;
-
-	@Column(name = "nom", length = 50)
+	private Long id_etudiant;
 	private String nom;
-
-	@Column(name = "prenom", length = 50)
 	private String prenom;
-
-	@Column(name = "cne", length = 15)
 	private String cne;
-
-	@Column(name = "adresse", length = 255)
 	private String adresse;
-
-	@Column(name = "niveau", length = 15)
 	private String niveau;
 
-	public Etudiant(Long idEtudiant, String nom, String prenom, String cne, String adresse, String niveau) {
+	public Etudiant(Long id_etudiant, String nom, String prenom, String cne, String adresse, String niveau) {
 		super();
-		this.idEtudiant = idEtudiant;
+		this.id_etudiant = id_etudiant;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.cne = cne;
@@ -54,12 +44,12 @@ public class Etudiant implements Serializable {
 		super();
 	}
 
-	public Long getIdEtudiant() {
-		return idEtudiant;
+	public Long getId_etudiant() {
+		return id_etudiant;
 	}
 
-	public void setIdEtudiant(Long idEtudiant) {
-		this.idEtudiant = idEtudiant;
+	public void setId_etudiant(Long id_etudiant) {
+		this.id_etudiant = id_etudiant;
 	}
 
 	public String getNom() {
@@ -100,6 +90,12 @@ public class Etudiant implements Serializable {
 
 	public void setNiveau(String niveau) {
 		this.niveau = niveau;
+	}
+
+	@Override
+	public String toString() {
+		return "Etudiant [id_etudiant=" + id_etudiant + ", nom=" + nom + ", prenom=" + prenom + ", cne=" + cne
+				+ ", adresse=" + adresse + ", niveau=" + niveau + "]";
 	}
 
 }
