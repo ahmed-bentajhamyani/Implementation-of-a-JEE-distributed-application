@@ -1,12 +1,11 @@
-package ma.fstt.busniss;
+package ma.fstt.business;
 
 import java.util.List;
-import jakarta.ejb.Local;
+import jakarta.ejb.Remote;
 import ma.fstt.entity.Etudiant;
 
-@Local
-public interface EJBEtudiantLocal {
-
+@Remote
+public interface EJBEtudiantRemote {
 	public void ajouterEtudiant(Etudiant etu);
 	public List<Etudiant> getEtudiants();
 	public void deleteEtudiant(Long id);

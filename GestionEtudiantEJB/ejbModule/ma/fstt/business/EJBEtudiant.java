@@ -1,4 +1,4 @@
-package ma.fstt.busniss;
+package ma.fstt.business;
 
 import java.util.List;
 import jakarta.ejb.LocalBean;

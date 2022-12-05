@@ -3,6 +3,7 @@ package ma.fstt.servlets;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+
 import jakarta.ejb.EJB;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -10,7 +11,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import ma.fstt.busniss.EJBEtudiantRemote;
+import ma.fstt.business.EJBEtudiantRemote;
 import ma.fstt.entity.Etudiant;
 
 @WebServlet("")
@@ -20,9 +21,10 @@ public class EtudiantServlet extends HttpServlet {
 	public EtudiantServlet() {
 	}
 
-	@EJB(mappedName = "java:global/GestionEtudiantEJB/EJBEtudiant!ma.fstt.busniss.EJBEtudiantRemote")
+	@EJB(mappedName = "java:global/GestionEtudiantEJB/EJBEtudiant!ma.fstt.business.EJBEtudiantRemote")
 	EJBEtudiantRemote ejb;
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getParameter("action");
@@ -57,6 +59,7 @@ public class EtudiantServlet extends HttpServlet {
 		}
 	}
 
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
@@ -113,7 +116,7 @@ public class EtudiantServlet extends HttpServlet {
 		ejb.updateEtudiant(etudiant);
 		response.sendRedirect("/GestionEtudiantWeb");
 	}
-	
+
 	private void deleteEtudiant(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 
