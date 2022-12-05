@@ -6,7 +6,7 @@
 
 This is an implementation of a distributed application using EJB3 technology.
 
-**Tools :** Eclipse, Maven, MySQL, JPA, EJB, WildFly.
+**Tools :** Eclipse, MySQL, JPA, EJB, WildFly.
 
 ## Table of contents
 [Installation of JBoss Tools plugin](#installation-of-jBoss-tools-plugin)
