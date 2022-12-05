@@ -29,7 +29,7 @@ We installed the JBoss Tools plugin from the Eclipse Marketplace:
 
 ## Configuration of WildFly's Datasource
 
-First we downloaded MySQL Connector .jar file and put it in a new repository we create in ```wildfly-27.0.0.Final\modules\system\layers\base\com``` with the name ```mysql\main``` and we create also the ```modules.xml``` inside it we put this code :
+First we download MySQL Connector .jar file and put it in a new repository we create in ```wildfly-27.0.0.Final\modules\system\layers\base\com``` with the name ```mysql\main``` and we create also the ```modules.xml``` inside it we put this code :
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
