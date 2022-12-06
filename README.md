@@ -19,6 +19,8 @@ This is an implementation of a distributed application using EJB3 technology.
 * [Update Etudiant](#update-etudiant)
 * [Delete Etudiant](#delete-etudiant)
 
+[Grouping the two projects into an Enterprise Application Project and deploy it in WildFly](#grouping-the-two-projects-into-an-enterprise-application-project-and-deploy-it-in-wildfly)
+
 ## Installation of JBoss Tools plugin
 
 We installed the JBoss Tools plugin from the Eclipse Marketplace:
@@ -134,4 +136,12 @@ We click on delete link to delete the etudiant we just create:
 
 <p align="center">
 	<img width="960" alt="1" src="https://user-images.githubusercontent.com/101653735/205465375-18ab7b29-935d-4f72-8b9d-9eca38b830c0.png">
+</p>
+
+## Grouping the two projects into an Enterprise Application Project and deploy it in WildFly
+
+We installed the JBoss Tools plugin from the Eclipse Marketplace:
+
+<p align="center">
+	![Deployement](https://user-images.githubusercontent.com/101653735/205941746-99929f02-fc6f-4d4c-8b63-44e88f5315fc.png)
 </p>
