@@ -21,7 +21,7 @@ public class EtudiantServlet extends HttpServlet {
 	public EtudiantServlet() {
 	}
 
-	@EJB(mappedName = "java:global/GestionEtudiantEJB/EJBEtudiant!ma.fstt.business.EJBEtudiantRemote")
+	@EJB
 	EJBEtudiantRemote ejb;
 
 	@Override
